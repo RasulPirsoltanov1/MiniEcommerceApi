@@ -1,0 +1,12 @@
+C:\Users\user\Desktop\E-Commerce Angular\E-CommerceApi\E-CommerceApi\Core\E-CommerceApi.Domain\bin\Debug\net6.0\E-CommerceApi.Domain.deps.json
+C:\Users\user\Desktop\E-Commerce Angular\E-CommerceApi\E-CommerceApi\Core\E-CommerceApi.Domain\bin\Debug\net6.0\E-CommerceApi.Domain.dll
+C:\Users\user\Desktop\E-Commerce Angular\E-CommerceApi\E-CommerceApi\Core\E-CommerceApi.Domain\bin\Debug\net6.0\E-CommerceApi.Domain.pdb
+C:\Users\user\Desktop\E-Commerce Angular\E-CommerceApi\E-CommerceApi\Core\E-CommerceApi.Domain\obj\Debug\net6.0\E-CommerceApi.Domain.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\E-Commerce Angular\E-CommerceApi\E-CommerceApi\Core\E-CommerceApi.Domain\obj\Debug\net6.0\E-CommerceApi.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\E-Commerce Angular\E-CommerceApi\E-CommerceApi\Core\E-CommerceApi.Domain\obj\Debug\net6.0\E-CommerceApi.Domain.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\E-Commerce Angular\E-CommerceApi\E-CommerceApi\Core\E-CommerceApi.Domain\obj\Debug\net6.0\E-CommerceApi.Domain.AssemblyInfo.cs
+C:\Users\user\Desktop\E-Commerce Angular\E-CommerceApi\E-CommerceApi\Core\E-CommerceApi.Domain\obj\Debug\net6.0\E-CommerceApi.Domain.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\E-Commerce Angular\E-CommerceApi\E-CommerceApi\Core\E-CommerceApi.Domain\obj\Debug\net6.0\E-CommerceApi.Domain.dll
+C:\Users\user\Desktop\E-Commerce Angular\E-CommerceApi\E-CommerceApi\Core\E-CommerceApi.Domain\obj\Debug\net6.0\refint\E-CommerceApi.Domain.dll
+C:\Users\user\Desktop\E-Commerce Angular\E-CommerceApi\E-CommerceApi\Core\E-CommerceApi.Domain\obj\Debug\net6.0\E-CommerceApi.Domain.pdb
+C:\Users\user\Desktop\E-Commerce Angular\E-CommerceApi\E-CommerceApi\Core\E-CommerceApi.Domain\obj\Debug\net6.0\ref\E-CommerceApi.Domain.dll

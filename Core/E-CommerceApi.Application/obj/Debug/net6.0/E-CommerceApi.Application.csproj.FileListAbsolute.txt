@@ -1,0 +1,15 @@
+C:\Users\user\Desktop\E-Commerce Angular\E-CommerceApi\E-CommerceApi\Core\E-CommerceApi.Application\bin\Debug\net6.0\E-CommerceApi.Application.deps.json
+C:\Users\user\Desktop\E-Commerce Angular\E-CommerceApi\E-CommerceApi\Core\E-CommerceApi.Application\bin\Debug\net6.0\E-CommerceApi.Application.dll
+C:\Users\user\Desktop\E-Commerce Angular\E-CommerceApi\E-CommerceApi\Core\E-CommerceApi.Application\bin\Debug\net6.0\E-CommerceApi.Application.pdb
+C:\Users\user\Desktop\E-Commerce Angular\E-CommerceApi\E-CommerceApi\Core\E-CommerceApi.Application\bin\Debug\net6.0\E-CommerceApi.Domain.dll
+C:\Users\user\Desktop\E-Commerce Angular\E-CommerceApi\E-CommerceApi\Core\E-CommerceApi.Application\bin\Debug\net6.0\E-CommerceApi.Domain.pdb
+C:\Users\user\Desktop\E-Commerce Angular\E-CommerceApi\E-CommerceApi\Core\E-CommerceApi.Application\obj\Debug\net6.0\E-CommerceApi.Application.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\E-Commerce Angular\E-CommerceApi\E-CommerceApi\Core\E-CommerceApi.Application\obj\Debug\net6.0\E-CommerceApi.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\E-Commerce Angular\E-CommerceApi\E-CommerceApi\Core\E-CommerceApi.Application\obj\Debug\net6.0\E-CommerceApi.Application.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\E-Commerce Angular\E-CommerceApi\E-CommerceApi\Core\E-CommerceApi.Application\obj\Debug\net6.0\E-CommerceApi.Application.AssemblyInfo.cs
+C:\Users\user\Desktop\E-Commerce Angular\E-CommerceApi\E-CommerceApi\Core\E-CommerceApi.Application\obj\Debug\net6.0\E-CommerceApi.Application.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\E-Commerce Angular\E-CommerceApi\E-CommerceApi\Core\E-CommerceApi.Application\obj\Debug\net6.0\E-CommerceApi.Application.csproj.CopyComplete
+C:\Users\user\Desktop\E-Commerce Angular\E-CommerceApi\E-CommerceApi\Core\E-CommerceApi.Application\obj\Debug\net6.0\E-CommerceApi.Application.dll
+C:\Users\user\Desktop\E-Commerce Angular\E-CommerceApi\E-CommerceApi\Core\E-CommerceApi.Application\obj\Debug\net6.0\refint\E-CommerceApi.Application.dll
+C:\Users\user\Desktop\E-Commerce Angular\E-CommerceApi\E-CommerceApi\Core\E-CommerceApi.Application\obj\Debug\net6.0\E-CommerceApi.Application.pdb
+C:\Users\user\Desktop\E-Commerce Angular\E-CommerceApi\E-CommerceApi\Core\E-CommerceApi.Application\obj\Debug\net6.0\ref\E-CommerceApi.Application.dll

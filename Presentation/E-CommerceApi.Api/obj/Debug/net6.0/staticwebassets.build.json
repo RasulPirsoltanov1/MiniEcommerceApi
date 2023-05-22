@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "ektljMwHHf8ywYy43faNgfQLBj5Z2Cctt85h8lmGzuY=",
+  "Source": "E-CommerceApi.Api",
+  "BasePath": "_content/E-CommerceApi.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "E-CommerceApi.Api\\wwwroot",
+      "Source": "E-CommerceApi.Api",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\E-Commerce Angular\\E-CommerceApi\\E-CommerceApi\\Presentation\\E-CommerceApi.Api\\wwwroot\\",
+      "BasePath": "_content/E-CommerceApi.Api",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}
