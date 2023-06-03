@@ -8,12 +8,15 @@ using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Http.Features;
+using E_CommerceApi.Infrastructure.Services.Storage.Local;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.Configure<FormOptions>(options =>
 {
     options.MultipartBodyLengthLimit = long.MaxValue;
-}); 
+});
+builder.Services.AddStorage<LocalStorage>();
+//builder.Services.AddStorage(E_CommerceApi.Infrastructure.Enums.StorageType.Local);
 builder.Services.AddPersistenceService(builder.Configuration);
 builder.Services.AddInfrastructureServices();
 builder.Services.AddMvc();

@@ -8,114 +8,27 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="product-images\.png" />
-    <None Remove="product-images\ADS" />
-    <None Remove="product-images\delete" />
-    <None Remove="product-images\delete-1-2-3.png" />
-    <None Remove="product-images\delete-1-2.png" />
-    <None Remove="product-images\delete-1.png" />
-    <None Remove="product-images\delete-2.png" />
-    <None Remove="product-images\delete-3.png" />
-    <None Remove="product-images\delete-4.png" />
-    <None Remove="product-images\delete-5.png" />
-    <None Remove="product-images\delete-6.png" />
-    <None Remove="product-images\delete-7.png" />
-    <None Remove="product-images\delete.png" />
-    <None Remove="product-images\edit-1.png" />
-    <None Remove="product-images\edit-2.png" />
-    <None Remove="product-images\edit-3.png" />
-    <None Remove="product-images\edit-4.png" />
-    <None Remove="product-images\wallpaperflare.com_wallpaper (29)-1.jpg" />
-    <None Remove="product-images\wallpaperflare.com_wallpaper (30)-1.jpg" />
-    <None Remove="product-images\wallpaperflare.com_wallpaper (30)-2.jpg" />
-    <None Remove="product-images\wallpaperflare.com_wallpaper (31)-1.jpg" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="product-images\.png">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="product-images\ADS">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="product-images\delete">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="product-images\delete-1-2-3.png">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="product-images\delete-1-2.png">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="product-images\delete-1.png">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="product-images\delete-2.png">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="product-images\delete-3.png">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="product-images\delete-4.png">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="product-images\delete-5.png">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="product-images\delete-6.png">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="product-images\delete-7.png">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="product-images\delete.png">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="product-images\edit-1.png">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="product-images\edit-2.png">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="product-images\edit-3.png">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="product-images\edit-4.png">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="product-images\wallpaperflare.com_wallpaper (29)-1.jpg">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="product-images\wallpaperflare.com_wallpaper (30)-1.jpg">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="product-images\wallpaperflare.com_wallpaper (30)-2.jpg">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="product-images\wallpaperflare.com_wallpaper (31)-1.jpg">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
+    <None Remove="wwwroot\resource\product-images\.png" />
+    <None Remove="wwwroot\resource\product-images\ADS" />
+    <None Remove="wwwroot\resource\product-images\delete" />
+    <None Remove="wwwroot\resource\product-images\delete-1-2-3.png" />
+    <None Remove="wwwroot\resource\product-images\delete-1-2.png" />
+    <None Remove="wwwroot\resource\product-images\delete-1.png" />
+    <None Remove="wwwroot\resource\product-images\delete-2.png" />
+    <None Remove="wwwroot\resource\product-images\delete-3.png" />
+    <None Remove="wwwroot\resource\product-images\delete-4.png" />
+    <None Remove="wwwroot\resource\product-images\delete-5.png" />
+    <None Remove="wwwroot\resource\product-images\delete-6.png" />
+    <None Remove="wwwroot\resource\product-images\delete-7.png" />
+    <None Remove="wwwroot\resource\product-images\delete.png" />
+    <None Remove="wwwroot\resource\product-images\edit-1.png" />
+    <None Remove="wwwroot\resource\product-images\edit-2.png" />
+    <None Remove="wwwroot\resource\product-images\edit-3.png" />
+    <None Remove="wwwroot\resource\product-images\edit-4.png" />
+    <None Remove="wwwroot\resource\product-images\wallpaperflare.com_wallpaper (29)-1.jpg" />
+    <None Remove="wwwroot\resource\product-images\wallpaperflare.com_wallpaper (30)-1.jpg" />
+    <None Remove="wwwroot\resource\product-images\wallpaperflare.com_wallpaper (30)-2.jpg" />
+    <None Remove="wwwroot\resource\product-images\wallpaperflare.com_wallpaper (31)-1.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -131,10 +44,6 @@
     <ProjectReference Include="..\..\Core\E-CommerceApi.Application\E-CommerceApi.Application.csproj" />
     <ProjectReference Include="..\..\Infrastructure\E-CommerceApi.Persistence\E-CommerceApi.Persistence.csproj" />
     <ProjectReference Include="..\..\Infrastructure\Infrastructure\E-CommerceApi.Infrastructure.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="wwwroot\resource\" />
   </ItemGroup>
 
 </Project>

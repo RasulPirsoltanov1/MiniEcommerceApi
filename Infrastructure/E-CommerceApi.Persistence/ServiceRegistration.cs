@@ -2,7 +2,10 @@
 using E_CommerceApi.Application.Repositories;
 using E_CommerceApi.Persistence.Concretes;
 using E_CommerceApi.Persistence.Concretes.Customers;
+using E_CommerceApi.Persistence.Concretes.Files;
+using E_CommerceApi.Persistence.Concretes.InvoiceFiles;
 using E_CommerceApi.Persistence.Concretes.Orders;
+using E_CommerceApi.Persistence.Concretes.ProductImageFiles;
 using E_CommerceApi.Persistence.Concretes.Products;
 using E_CommerceApi.Persistence.Contexts;
 using Microsoft.EntityFrameworkCore;
@@ -32,6 +35,12 @@ namespace E_CommerceApi.Persistence
             services.AddScoped<ICustomerWriteRepository, CustomerWriteRepository>();
             services.AddScoped<IProductWriteRepository, ProductWriteRepository>();
             services.AddScoped<IOrderWriteRepository, OrderWriteRepository>();
+            services.AddScoped<IFileReadRepository, FileReadRepository>();
+            services.AddScoped<IFileWriteRepository,FileWriteRepository>();
+            services.AddScoped<IProductImageFileReadRepository, ProductImageReadRepository>();
+            services.AddScoped<IProductImageFileWriteRepository, ProductImageWriteRepository>();
+            services.AddScoped<IInvoiceFileReadRepository,InvoiceFileReadRepository>();
+            services.AddScoped<IInvoiceFileWriteRepository,InvoiceFileWriteRepository>();
         }
     }
 }

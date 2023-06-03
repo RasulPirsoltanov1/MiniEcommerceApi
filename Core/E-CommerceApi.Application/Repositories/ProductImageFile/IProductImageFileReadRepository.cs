@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace E_CommerceApi.Application.Repositories
 {
-    public interface IProductImageFileReadRepository:IReadRepository<ProductImageFile>
+    public interface IProductImageFileWriteRepository:IWriteRepository<ProductImageFile>
     {
     }
 }

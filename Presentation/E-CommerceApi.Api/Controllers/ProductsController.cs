@@ -21,17 +21,37 @@ namespace E_CommerceApi.Api.Controllers
         private readonly IProductWriteRepository _productWriteRepository;
         private readonly IWebHostEnvironment _webHostEnvironment;
         private readonly IFileService _fileService;
+        private IFileReadRepository _fileReadRepository;
+        private IFileWriteRepository _fileWriteRepository;
+        private IProductImageFileReadRepository _productImageFileReadRepository;
+        private IProductImageFileWriteRepository _productImageFileWriteRepository;
+        private IInvoiceFileReadRepository _invoiceFileReadRepository;
+        private IInvoiceFileWriteRepository _invoiceFileWriteRepository;
+        private IStorageService _storageService;
 
         public ProductsController(
                                   IProductReadRepository productReadRepository,
                                   IProductWriteRepository productWriteRepository,
                                   IWebHostEnvironment webHostEnvironment,
-                                  IFileService fileService)
+                                  IFileService fileService,
+                                  IFileWriteRepository fileWriteRepository,
+                                  IFileReadRepository fileReadRepository,
+                                  IInvoiceFileReadRepository invoiceFileReadRepository,
+                                  IProductImageFileReadRepository productImageFileReadRepository,
+                                  IProductImageFileWriteRepository productImageFileWriteRepository,
+                                  IInvoiceFileWriteRepository invoiceFileWriteRepository,
+                                  IStorageService storageService)
         {
             _productReadRepository = productReadRepository;
             _productWriteRepository = productWriteRepository;
             _webHostEnvironment = webHostEnvironment;
             _fileService = fileService;
+            _fileWriteRepository = fileWriteRepository;
+            _invoiceFileReadRepository = invoiceFileReadRepository;
+            _productImageFileReadRepository = productImageFileReadRepository;
+            _productImageFileWriteRepository = productImageFileWriteRepository;
+            _invoiceFileWriteRepository = invoiceFileWriteRepository;
+            _storageService = storageService;
         }
 
         [HttpGet]
@@ -105,7 +125,23 @@ namespace E_CommerceApi.Api.Controllers
             Random random = new Random();
             try
             {
-                await _fileService.UploadAsync(Request.Form.Files,"resource", "product-images");
+                //var datas = _storageService.UploadAsync(Request.Form.Files, "rr", "ew");
+
+                //_invoiceFileWriteRepository.AddRangeAsync(new List<InvoiceFile>(datas.Select(d => new InvoiceFile()
+                //{
+                //    FileName = d.fileName,
+                //    Path = d.path,
+                //    Price = new Random().Next()
+                //}).ToList()));
+                await _invoiceFileWriteRepository.SaveAsync();
+                var datas =await _storageService.UploadAsync(Request.Form.Files, "rr", "ew");
+                await _productImageFileWriteRepository.AddRangeAsync(datas.Select(f=>new ProductImageFile()
+                {
+                    FileName=f.fileName,
+                    Path=f.path,
+                    Storage= _storageService.StorageName
+                }).ToList());
+                await _productImageFileWriteRepository.SaveAsync();
             }
             catch (Exception ex)
             {
