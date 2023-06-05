@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace E_CommerceApi.Infrastructure.Services.Storage.Local
 {
-    public class LocalStorage : ILocalStorage
+    public class LocalStorage :Storage, ILocalStorage
     {
         private IWebHostEnvironment _webHostEnvironment;
 
@@ -67,8 +67,9 @@ namespace E_CommerceApi.Infrastructure.Services.Storage.Local
             }
             foreach (var file in files)
             {
-                bool result = await CopyFileAsync(Path.Combine(uploadPath, file.Name), file);
-                datas.Add((file.Name, Path.Combine(uploadPath, file.Name)));
+                string newFileName = await FileRenameAsync(uploadPath, file.FileName,HasFile);
+                bool result = await CopyFileAsync(Path.Combine(uploadPath, newFileName), file);
+                datas.Add((newFileName, Path.Combine(uploadPath, newFileName)));
                 results.Add(result);
             }
             if (results.TrueForAll(r => r.Equals(true)))

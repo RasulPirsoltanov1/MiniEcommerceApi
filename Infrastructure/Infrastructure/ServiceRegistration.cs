@@ -20,7 +20,7 @@ namespace E_CommerceApi.Infrastructure
             serviceCollection.AddScoped<IFileService, FileService>();
             serviceCollection.AddScoped<IStorageService, StorageService>();
         }
-        public static void AddStorage<T>(this IServiceCollection serviceCollection) where T : class,IStorage
+        public static void AddStorage<T>(this IServiceCollection serviceCollection) where T : Storage,IStorage
         {
             serviceCollection.AddScoped<IStorage, T>();
         }

@@ -120,7 +120,7 @@ namespace E_CommerceApi.Api.Controllers
             return Ok();
         }
         [HttpPost("[action]")]
-        public async Task<IActionResult> Upload()
+        public async Task<IActionResult> Upload(string id)
         {
             Random random = new Random();
             try
@@ -133,19 +133,35 @@ namespace E_CommerceApi.Api.Controllers
                 //    Path = d.path,
                 //    Price = new Random().Next()
                 //}).ToList()));
-                await _invoiceFileWriteRepository.SaveAsync();
+                //await _invoiceFileWriteRepository.SaveAsync();
+                var product=await _productReadRepository.GetByIdAsync(id);
                 var datas =await _storageService.UploadAsync(Request.Form.Files, "rr", "ew");
                 await _productImageFileWriteRepository.AddRangeAsync(datas.Select(f=>new ProductImageFile()
                 {
                     FileName=f.fileName,
                     Path=f.path,
-                    Storage= _storageService.StorageName
+                    Storage= _storageService.StorageName,
+                    Products = new List<Product>() { product}
                 }).ToList());
                 await _productImageFileWriteRepository.SaveAsync();
             }
             catch (Exception ex)
             {
                 return Ok(ex.Message);
+            }
+            return Ok();
+        }
+        [HttpGet("[action]/{id}")]
+        public async Task<IActionResult> GetProductImages(string id)
+        {
+            var product = await _productReadRepository.Table.Include(pi => pi.ProductImageFiles).FirstOrDefaultAsync(p=>p.Id==Guid.Parse(id));
+            if (product != null)
+            {
+                return Ok(product.ProductImageFiles.Select(p => new
+                {
+                    p.Path,
+                    p.FileName
+                }));
             }
             return Ok();
         }
