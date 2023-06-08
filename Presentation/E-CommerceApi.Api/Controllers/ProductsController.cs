@@ -1,4 +1,6 @@
 ﻿using E_CommerceApi.Application.Abstractions;
+using E_CommerceApi.Application.Features.Queries.CreateProduct;
+using E_CommerceApi.Application.Features.Queries.GetAllProducts;
 using E_CommerceApi.Application.Repositories;
 using E_CommerceApi.Application.RequestParameters;
 using E_CommerceApi.Application.Services;
@@ -6,6 +8,7 @@ using E_CommerceApi.Application.ViewModels.Products;
 using E_CommerceApi.Domain.Entities;
 using E_CommerceApi.Infrastructure.Services;
 using E_CommerceApi.Persistence.Concretes.Customers;
+using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -28,7 +31,7 @@ namespace E_CommerceApi.Api.Controllers
         private IInvoiceFileReadRepository _invoiceFileReadRepository;
         private IInvoiceFileWriteRepository _invoiceFileWriteRepository;
         private IStorageService _storageService;
-
+        private readonly IMediator _mediator;
         public ProductsController(
                                   IProductReadRepository productReadRepository,
                                   IProductWriteRepository productWriteRepository,
@@ -40,7 +43,8 @@ namespace E_CommerceApi.Api.Controllers
                                   IProductImageFileReadRepository productImageFileReadRepository,
                                   IProductImageFileWriteRepository productImageFileWriteRepository,
                                   IInvoiceFileWriteRepository invoiceFileWriteRepository,
-                                  IStorageService storageService)
+                                  IStorageService storageService,
+                                  IMediator mediator)
         {
             _productReadRepository = productReadRepository;
             _productWriteRepository = productWriteRepository;
@@ -52,29 +56,14 @@ namespace E_CommerceApi.Api.Controllers
             _productImageFileWriteRepository = productImageFileWriteRepository;
             _invoiceFileWriteRepository = invoiceFileWriteRepository;
             _storageService = storageService;
+            _mediator = mediator;
         }
 
         [HttpGet]
-        public async Task<IActionResult> Get([FromQuery] Pagination pagination)
+        public async Task<IActionResult> Get([FromQuery] GetAllProductQueryRequest getAllProductQueryRequest)
         {
             await Task.Delay(5);
-
-            var totalCount = _productReadRepository.GetAll().Count();
-
-            var products = _productReadRepository.GetAll().Select(p => new
-            {
-                p.Id,
-                p.Name,
-                p.Price,
-                p.Stock,
-                p.CreatedDate,
-                p.UpdatedDate
-            }).Skip(pagination.Size * pagination.Page).Take(pagination.Size);
-            return Ok(new
-            {
-                products = products,
-                totalCount = totalCount
-            });
+            return Ok(await _mediator.Send(getAllProductQueryRequest));
         }
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(string id)
@@ -82,16 +71,10 @@ namespace E_CommerceApi.Api.Controllers
             return Ok(await _productReadRepository.GetByIdAsync(id));
         }
         [HttpPost]
-        public async Task<IActionResult> Post(VM_Create_Product model)
+        public async Task<IActionResult> Post(CreateProductCommandRequest createProductCommandRequest)
         {
-            await _productWriteRepository.AddAsync(new Product
-            {
-                Name = model.Name,
-                Price = model.Price,
-                Stock = model.Stock,
-            });
-            await _productWriteRepository.SaveAsync();
-            return Ok();
+            CreateProductCommandResponse createProductCommandResponse = await _mediator.Send(createProductCommandRequest);
+            return Ok(HttpStatusCode.Created);
         }
 
         [HttpPut]
@@ -134,14 +117,14 @@ namespace E_CommerceApi.Api.Controllers
                 //    Price = new Random().Next()
                 //}).ToList()));
                 //await _invoiceFileWriteRepository.SaveAsync();
-                var product=await _productReadRepository.GetByIdAsync(id);
-                var datas =await _storageService.UploadAsync(Request.Form.Files, "rr", "ew");
-                await _productImageFileWriteRepository.AddRangeAsync(datas.Select(f=>new ProductImageFile()
+                var product = await _productReadRepository.GetByIdAsync(id);
+                var datas = await _storageService.UploadAsync(Request.Form.Files, "rr", "ew");
+                await _productImageFileWriteRepository.AddRangeAsync(datas.Select(f => new ProductImageFile()
                 {
-                    FileName=f.fileName,
-                    Path=f.path,
-                    Storage= _storageService.StorageName,
-                    Products = new List<Product>() { product}
+                    FileName = f.fileName,
+                    Path = f.path,
+                    Storage = _storageService.StorageName,
+                    Products = new List<Product>() { product }
                 }).ToList());
                 await _productImageFileWriteRepository.SaveAsync();
             }
@@ -154,14 +137,34 @@ namespace E_CommerceApi.Api.Controllers
         [HttpGet("[action]/{id}")]
         public async Task<IActionResult> GetProductImages(string id)
         {
-            var product = await _productReadRepository.Table.Include(pi => pi.ProductImageFiles).FirstOrDefaultAsync(p=>p.Id==Guid.Parse(id));
+            var product = await _productReadRepository.Table.Include(pi => pi.ProductImageFiles).FirstOrDefaultAsync(p => p.Id == Guid.Parse(id));
             if (product != null)
             {
+                await Task.Delay(300);
                 return Ok(product.ProductImageFiles.Select(p => new
                 {
                     p.Path,
-                    p.FileName
+                    p.FileName,
+                    p.Id
                 }));
+            }
+            return Ok();
+        }
+        [HttpDelete("[action]/{id}")]
+        public async Task<IActionResult> DeleteProductImage(string id, string imageId)
+        {
+            await Task.Delay(50);
+            try
+            {
+                var product = await _productReadRepository.Table.Include(pi => pi.ProductImageFiles).FirstOrDefaultAsync(p => p.Id == Guid.Parse(id));
+                ProductImageFile productImageFile = product.ProductImageFiles.FirstOrDefault(p => p.Id == Guid.Parse(imageId));
+                product.ProductImageFiles.Remove(productImageFile);
+                await _productImageFileReadRepository.SaveAsync();
+                await _productImageFileWriteRepository.SaveAsync();
+            }
+            catch (Exception ex)
+            {
+                return StatusCode((int)HttpStatusCode.InternalServerError, ex.Message);
             }
             return Ok();
         }

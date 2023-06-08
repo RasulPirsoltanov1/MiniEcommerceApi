@@ -99,3 +99,6 @@ C:\Users\user\Desktop\E-Commerce Angular\E-CommerceApi\E-CommerceApi\Presentatio
 C:\Users\user\Desktop\E-Commerce Angular\E-CommerceApi\E-CommerceApi\Presentation\E-CommerceApi.Api\bin\Debug\net6.0\E-CommerceApi.Infrastructure.dll
 C:\Users\user\Desktop\E-Commerce Angular\E-CommerceApi\E-CommerceApi\Presentation\E-CommerceApi.Api\bin\Debug\net6.0\E-CommerceApi.Infrastructure.pdb
 C:\Users\user\Desktop\E-Commerce Angular\E-CommerceApi\E-CommerceApi\Presentation\E-CommerceApi.Api\bin\Debug\net6.0\E-CommerceApi.Api.staticwebassets.runtime.json
+C:\Users\user\Desktop\E-Commerce Angular\E-CommerceApi\E-CommerceApi\Presentation\E-CommerceApi.Api\bin\Debug\net6.0\MediatR.dll
+C:\Users\user\Desktop\E-Commerce Angular\E-CommerceApi\E-CommerceApi\Presentation\E-CommerceApi.Api\bin\Debug\net6.0\MediatR.Contracts.dll
+C:\Users\user\Desktop\E-Commerce Angular\E-CommerceApi\E-CommerceApi\Presentation\E-CommerceApi.Api\bin\Debug\net6.0\MediatR.Extensions.Microsoft.DependencyInjection.dll

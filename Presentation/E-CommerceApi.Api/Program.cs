@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Http.Features;
 using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Http.Features;
 using E_CommerceApi.Infrastructure.Services.Storage.Local;
+using E_CommerceApi.Application;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.Configure<FormOptions>(options =>
@@ -19,6 +20,7 @@ builder.Services.AddStorage<LocalStorage>();
 //builder.Services.AddStorage(E_CommerceApi.Infrastructure.Enums.StorageType.Local);
 builder.Services.AddPersistenceService(builder.Configuration);
 builder.Services.AddInfrastructureServices();
+builder.Services.AddApplicationServices();
 builder.Services.AddMvc();
 builder.Services.AddCors(options => options.AddDefaultPolicy(policy => policy.WithOrigins("http://localhost:4200",
     "https://localhost:4200").AllowAnyHeader().AllowAnyMethod()));
