@@ -1,9 +1,12 @@
 ﻿using E_CommerceApi.Application.Abstractions;
+using E_CommerceApi.Application.Abstractions.Tokens;
+using E_CommerceApi.Application.DTOs;
 using E_CommerceApi.Application.Services;
 using E_CommerceApi.Infrastructure.Enums;
 using E_CommerceApi.Infrastructure.Services;
 using E_CommerceApi.Infrastructure.Services.Storage;
 using E_CommerceApi.Infrastructure.Services.Storage.Local;
+using E_CommerceApi.Infrastructure.Services.Tokens;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -19,6 +22,7 @@ namespace E_CommerceApi.Infrastructure
         {
             serviceCollection.AddScoped<IFileService, FileService>();
             serviceCollection.AddScoped<IStorageService, StorageService>();
+            serviceCollection.AddScoped<ITokenHandler, TokenHandler>();
         }
         public static void AddStorage<T>(this IServiceCollection serviceCollection) where T : Storage,IStorage
         {

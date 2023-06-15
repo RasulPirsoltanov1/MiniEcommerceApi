@@ -114,3 +114,4 @@ C:\Users\user\Desktop\E-Commerce Angular\E-CommerceApi\E-CommerceApi\Presentatio
 C:\Users\user\Desktop\E-Commerce Angular\E-CommerceApi\E-CommerceApi\Presentation\E-CommerceApi.Api\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\user\Desktop\E-Commerce Angular\E-CommerceApi\E-CommerceApi\Presentation\E-CommerceApi.Api\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\user\Desktop\E-Commerce Angular\E-CommerceApi\E-CommerceApi\Presentation\E-CommerceApi.Api\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\user\Desktop\E-Commerce Angular\E-CommerceApi\E-CommerceApi\Presentation\E-CommerceApi.Api\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
