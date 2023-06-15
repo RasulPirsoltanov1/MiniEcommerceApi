@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "sKSWgM+iYlZLD/4Z2H0fAzTJr110BHet4MaUIsWCll4=",
+  "Hash": "1G2nNMHbyybHsEYF98nuc/7tJXT7mF4xtbh9KWfDl7c=",
   "Source": "E-CommerceApi.Api",
   "BasePath": "_content/E-CommerceApi.Api",
   "Mode": "Default",
@@ -442,6 +442,23 @@
       "OriginalItemSpec": "wwwroot\\rr\\ew\\2-1.png"
     },
     {
+      "Identity": "C:\\Users\\user\\Desktop\\E-Commerce Angular\\E-CommerceApi\\E-CommerceApi\\Presentation\\E-CommerceApi.Api\\wwwroot\\rr\\ew\\custom_resized_c1ed3ddcf1c04913a0b4ff9f7063e1ac  Copy-1.jpeg",
+      "SourceId": "E-CommerceApi.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\E-Commerce Angular\\E-CommerceApi\\E-CommerceApi\\Presentation\\E-CommerceApi.Api\\wwwroot\\",
+      "BasePath": "_content/E-CommerceApi.Api",
+      "RelativePath": "rr/ew/custom_resized_c1ed3ddcf1c04913a0b4ff9f7063e1ac  Copy-1.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\rr\\ew\\custom_resized_c1ed3ddcf1c04913a0b4ff9f7063e1ac  Copy-1.jpeg"
+    },
+    {
       "Identity": "C:\\Users\\user\\Desktop\\E-Commerce Angular\\E-CommerceApi\\E-CommerceApi\\Presentation\\E-CommerceApi.Api\\wwwroot\\rr\\ew\\custom_resized_c1ed3ddcf1c04913a0b4ff9f7063e1ac-1.jpeg",
       "SourceId": "E-CommerceApi.Api",
       "SourceType": "Discovered",
@@ -474,6 +491,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\rr\\ew\\custom_resized_c1ed3ddcf1c04913a0b4ff9f7063e1ac-2.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\E-Commerce Angular\\E-CommerceApi\\E-CommerceApi\\Presentation\\E-CommerceApi.Api\\wwwroot\\rr\\ew\\custom_resized_c1ed3ddcf1c04913a0b4ff9f7063e1ac-3.jpeg",
+      "SourceId": "E-CommerceApi.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\E-Commerce Angular\\E-CommerceApi\\E-CommerceApi\\Presentation\\E-CommerceApi.Api\\wwwroot\\",
+      "BasePath": "_content/E-CommerceApi.Api",
+      "RelativePath": "rr/ew/custom_resized_c1ed3ddcf1c04913a0b4ff9f7063e1ac-3.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\rr\\ew\\custom_resized_c1ed3ddcf1c04913a0b4ff9f7063e1ac-3.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\E-Commerce Angular\\E-CommerceApi\\E-CommerceApi\\Presentation\\E-CommerceApi.Api\\wwwroot\\rr\\ew\\custom_resized_c1ed3ddcf1c04913a0b4ff9f7063e1ac-4.jpeg",
+      "SourceId": "E-CommerceApi.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\E-Commerce Angular\\E-CommerceApi\\E-CommerceApi\\Presentation\\E-CommerceApi.Api\\wwwroot\\",
+      "BasePath": "_content/E-CommerceApi.Api",
+      "RelativePath": "rr/ew/custom_resized_c1ed3ddcf1c04913a0b4ff9f7063e1ac-4.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\rr\\ew\\custom_resized_c1ed3ddcf1c04913a0b4ff9f7063e1ac-4.jpeg"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\E-Commerce Angular\\E-CommerceApi\\E-CommerceApi\\Presentation\\E-CommerceApi.Api\\wwwroot\\rr\\ew\\delete-1.png",
@@ -1020,6 +1071,57 @@
       "OriginalItemSpec": "wwwroot\\rr\\ew\\wallpaperflare.com_wallpaper (34)-1.jpg"
     },
     {
+      "Identity": "C:\\Users\\user\\Desktop\\E-Commerce Angular\\E-CommerceApi\\E-CommerceApi\\Presentation\\E-CommerceApi.Api\\wwwroot\\rr\\ew\\wallpaperflare.com_wallpaper (35)-1.jpg",
+      "SourceId": "E-CommerceApi.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\E-Commerce Angular\\E-CommerceApi\\E-CommerceApi\\Presentation\\E-CommerceApi.Api\\wwwroot\\",
+      "BasePath": "_content/E-CommerceApi.Api",
+      "RelativePath": "rr/ew/wallpaperflare.com_wallpaper (35)-1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\rr\\ew\\wallpaperflare.com_wallpaper (35)-1.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\E-Commerce Angular\\E-CommerceApi\\E-CommerceApi\\Presentation\\E-CommerceApi.Api\\wwwroot\\rr\\ew\\wallpaperflare.com_wallpaper (36)-1.jpg",
+      "SourceId": "E-CommerceApi.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\E-Commerce Angular\\E-CommerceApi\\E-CommerceApi\\Presentation\\E-CommerceApi.Api\\wwwroot\\",
+      "BasePath": "_content/E-CommerceApi.Api",
+      "RelativePath": "rr/ew/wallpaperflare.com_wallpaper (36)-1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\rr\\ew\\wallpaperflare.com_wallpaper (36)-1.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\E-Commerce Angular\\E-CommerceApi\\E-CommerceApi\\Presentation\\E-CommerceApi.Api\\wwwroot\\rr\\ew\\wallpaperflare.com_wallpaper (37)-1.jpg",
+      "SourceId": "E-CommerceApi.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\E-Commerce Angular\\E-CommerceApi\\E-CommerceApi\\Presentation\\E-CommerceApi.Api\\wwwroot\\",
+      "BasePath": "_content/E-CommerceApi.Api",
+      "RelativePath": "rr/ew/wallpaperflare.com_wallpaper (37)-1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\rr\\ew\\wallpaperflare.com_wallpaper (37)-1.jpg"
+    },
+    {
       "Identity": "C:\\Users\\user\\Desktop\\E-Commerce Angular\\E-CommerceApi\\E-CommerceApi\\Presentation\\E-CommerceApi.Api\\wwwroot\\rr\\ew\\WhatsApp Image 20230607 at 20.40.51  Copy-1.jpeg",
       "SourceId": "E-CommerceApi.Api",
       "SourceType": "Discovered",
@@ -1054,6 +1156,23 @@
       "OriginalItemSpec": "wwwroot\\rr\\ew\\WhatsApp Image 20230607 at 20.40.51  Copy-2.jpeg"
     },
     {
+      "Identity": "C:\\Users\\user\\Desktop\\E-Commerce Angular\\E-CommerceApi\\E-CommerceApi\\Presentation\\E-CommerceApi.Api\\wwwroot\\rr\\ew\\WhatsApp Image 20230607 at 20.40.51  Copy-3.jpeg",
+      "SourceId": "E-CommerceApi.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\E-Commerce Angular\\E-CommerceApi\\E-CommerceApi\\Presentation\\E-CommerceApi.Api\\wwwroot\\",
+      "BasePath": "_content/E-CommerceApi.Api",
+      "RelativePath": "rr/ew/WhatsApp Image 20230607 at 20.40.51  Copy-3.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\rr\\ew\\WhatsApp Image 20230607 at 20.40.51  Copy-3.jpeg"
+    },
+    {
       "Identity": "C:\\Users\\user\\Desktop\\E-Commerce Angular\\E-CommerceApi\\E-CommerceApi\\Presentation\\E-CommerceApi.Api\\wwwroot\\rr\\ew\\WhatsApp Image 20230607 at 20.40.51 (1)-1.jpeg",
       "SourceId": "E-CommerceApi.Api",
       "SourceType": "Discovered",
@@ -1086,6 +1205,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\rr\\ew\\WhatsApp Image 20230607 at 20.40.51 (1)-2.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\E-Commerce Angular\\E-CommerceApi\\E-CommerceApi\\Presentation\\E-CommerceApi.Api\\wwwroot\\rr\\ew\\WhatsApp Image 20230607 at 20.40.51 (1)-3.jpeg",
+      "SourceId": "E-CommerceApi.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\E-Commerce Angular\\E-CommerceApi\\E-CommerceApi\\Presentation\\E-CommerceApi.Api\\wwwroot\\",
+      "BasePath": "_content/E-CommerceApi.Api",
+      "RelativePath": "rr/ew/WhatsApp Image 20230607 at 20.40.51 (1)-3.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\rr\\ew\\WhatsApp Image 20230607 at 20.40.51 (1)-3.jpeg"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\E-Commerce Angular\\E-CommerceApi\\E-CommerceApi\\Presentation\\E-CommerceApi.Api\\wwwroot\\rr\\ew\\WhatsApp Image 20230607 at 20.40.51-1.jpeg",
@@ -1222,6 +1358,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\rr\\ew\\WhatsApp Image 20230607 at 20.40.51-8.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\E-Commerce Angular\\E-CommerceApi\\E-CommerceApi\\Presentation\\E-CommerceApi.Api\\wwwroot\\rr\\ew\\WhatsApp Image 20230607 at 20.40.51-9.jpeg",
+      "SourceId": "E-CommerceApi.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\E-Commerce Angular\\E-CommerceApi\\E-CommerceApi\\Presentation\\E-CommerceApi.Api\\wwwroot\\",
+      "BasePath": "_content/E-CommerceApi.Api",
+      "RelativePath": "rr/ew/WhatsApp Image 20230607 at 20.40.51-9.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\rr\\ew\\WhatsApp Image 20230607 at 20.40.51-9.jpeg"
     }
   ]
 }

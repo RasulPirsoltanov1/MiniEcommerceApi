@@ -1,5 +1,6 @@
 ﻿using E_CommerceApi.Application.Abstractions;
 using E_CommerceApi.Application.Repositories;
+using E_CommerceApi.Domain.Entities.Identity;
 using E_CommerceApi.Persistence.Concretes;
 using E_CommerceApi.Persistence.Concretes.Customers;
 using E_CommerceApi.Persistence.Concretes.Files;
@@ -41,6 +42,13 @@ namespace E_CommerceApi.Persistence
             services.AddScoped<IProductImageFileWriteRepository, ProductImageWriteRepository>();
             services.AddScoped<IInvoiceFileReadRepository,InvoiceFileReadRepository>();
             services.AddScoped<IInvoiceFileWriteRepository,InvoiceFileWriteRepository>();
+            services.AddIdentity<AppUser, AppRole>(options =>
+            {
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequiredLength = 3;
+                options.Password.RequireUppercase = false;
+                options.Password.RequireLowercase = false;
+            }).AddEntityFrameworkStores<ECommerceApiDbContext>();
         }
     }
 }

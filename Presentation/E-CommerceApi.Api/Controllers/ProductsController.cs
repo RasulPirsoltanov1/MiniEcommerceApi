@@ -35,7 +35,7 @@ namespace E_CommerceApi.Api.Controllers
         private IProductImageFileReadRepository _productImageFileReadRepository;
         private IProductImageFileWriteRepository _productImageFileWriteRepository;
         private IInvoiceFileReadRepository _invoiceFileReadRepository;
-        private IInvoiceFileWriteRepository _invoiceFileWriteRepository;
+        private IInvoiceFileWriteRepository _invoiceFileWriteRepository;     
         private IStorageService _storageService;
         private readonly IMediator _mediator;
         public ProductsController(
