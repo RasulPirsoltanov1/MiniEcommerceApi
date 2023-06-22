@@ -28,42 +28,10 @@ namespace E_CommerceApi.Api.Controllers
     [Authorize(AuthenticationSchemes = "Admin")]
     public class ProductsController : ControllerBase
     {
-        private readonly IProductReadRepository _productReadRepository;
-        private readonly IProductWriteRepository _productWriteRepository;
-        private readonly IWebHostEnvironment _webHostEnvironment;
-        private readonly IFileService _fileService;
-        private IFileReadRepository _fileReadRepository;
-        private IFileWriteRepository _fileWriteRepository;
-        private IProductImageFileReadRepository _productImageFileReadRepository;
-        private IProductImageFileWriteRepository _productImageFileWriteRepository;
-        private IInvoiceFileReadRepository _invoiceFileReadRepository;
-        private IInvoiceFileWriteRepository _invoiceFileWriteRepository;     
-        private IStorageService _storageService;
+
         private readonly IMediator _mediator;
-        public ProductsController(
-                                  IProductReadRepository productReadRepository,
-                                  IProductWriteRepository productWriteRepository,
-                                  IWebHostEnvironment webHostEnvironment,
-                                  IFileService fileService,
-                                  IFileWriteRepository fileWriteRepository,
-                                  IFileReadRepository fileReadRepository,
-                                  IInvoiceFileReadRepository invoiceFileReadRepository,
-                                  IProductImageFileReadRepository productImageFileReadRepository,
-                                  IProductImageFileWriteRepository productImageFileWriteRepository,
-                                  IInvoiceFileWriteRepository invoiceFileWriteRepository,
-                                  IStorageService storageService,
-                                  IMediator mediator)
+        public ProductsController(IMediator mediator)
         {
-            _productReadRepository = productReadRepository;
-            _productWriteRepository = productWriteRepository;
-            _webHostEnvironment = webHostEnvironment;
-            _fileService = fileService;
-            _fileWriteRepository = fileWriteRepository;
-            _invoiceFileReadRepository = invoiceFileReadRepository;
-            _productImageFileReadRepository = productImageFileReadRepository;
-            _productImageFileWriteRepository = productImageFileWriteRepository;
-            _invoiceFileWriteRepository = invoiceFileWriteRepository;
-            _storageService = storageService;
             _mediator = mediator;
         }
 

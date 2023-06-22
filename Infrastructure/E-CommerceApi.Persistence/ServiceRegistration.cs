@@ -1,4 +1,5 @@
 ﻿using E_CommerceApi.Application.Abstractions;
+using E_CommerceApi.Application.Abstractions.Services;
 using E_CommerceApi.Application.Repositories;
 using E_CommerceApi.Domain.Entities.Identity;
 using E_CommerceApi.Persistence.Concretes;
@@ -9,6 +10,7 @@ using E_CommerceApi.Persistence.Concretes.Orders;
 using E_CommerceApi.Persistence.Concretes.ProductImageFiles;
 using E_CommerceApi.Persistence.Concretes.Products;
 using E_CommerceApi.Persistence.Contexts;
+using E_CommerceApi.Persistence.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -49,6 +51,8 @@ namespace E_CommerceApi.Persistence
                 options.Password.RequireUppercase = false;
                 options.Password.RequireLowercase = false;
             }).AddEntityFrameworkStores<ECommerceApiDbContext>();
+            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IAuthService, AuthService>();
         }
     }
 }

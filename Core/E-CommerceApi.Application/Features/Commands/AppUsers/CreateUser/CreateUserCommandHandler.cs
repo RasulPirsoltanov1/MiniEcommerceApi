@@ -1,4 +1,6 @@
-﻿using E_CommerceApi.Application.Exceptions;
+﻿using E_CommerceApi.Application.Abstractions.Services;
+using E_CommerceApi.Application.DTOs.User;
+using E_CommerceApi.Application.Exceptions;
 using E_CommerceApi.Domain.Entities.Identity;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
@@ -13,42 +15,29 @@ namespace E_CommerceApi.Application.Features.Commands.AppUsers.CreateUser
     public class CreateUserCommandHandler : IRequestHandler<CreateUserCommandRequest, CreateUserCommandResponse>
     {
         private readonly UserManager<AppUser> _userManager;
+        private IUserService _userService;
 
-        public CreateUserCommandHandler(UserManager<AppUser> userManager)
+        public CreateUserCommandHandler(UserManager<AppUser> userManager, IUserService userService)
         {
             this._userManager = userManager;
+            _userService = userService;
         }
 
         public async Task<CreateUserCommandResponse> Handle(CreateUserCommandRequest request, CancellationToken cancellationToken)
         {
-            string errorList = String.Empty;
-           IdentityResult identityResult= await _userManager.CreateAsync(new AppUser()
-           {
-               Id=Guid.NewGuid().ToString(),
-               NameSurname = request.NameSurname,
-               Email = request.Email,
-               UserName = request.UserName,
-           },request.Password);
-            if (identityResult.Succeeded)
+           CreateUserResponse createUserResponse= await _userService.CreateAsync(new()
             {
-                return new()
-                {
-                    Succeded=true,
-                    Message="User created Succesfully"
-                };
-            }
-            else
+                Email = request.Email,
+                NameSurname = request.NameSurname,
+                Password = request.Password,
+                PasswordConfirm = request.PasswordConfirm,
+                UserName = request.UserName,
+            });
+            return new()
             {
-                foreach(var error in identityResult.Errors)
-                {
-                    errorList += $"{error.Code}: {error.Description}\n";
-                }
-                return new()
-                {
-                    Message = errorList,
-                    Succeded = false
-                };
-            }
+                Message = createUserResponse.Message,
+                Succeded = createUserResponse.Succeded
+            }; 
         }
     }
 }
