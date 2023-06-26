@@ -1,6 +1,7 @@
 ﻿using E_CommerceApi.Application.Repositories;
 using E_CommerceApi.Application.RequestParameters;
 using MediatR;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,14 +13,18 @@ namespace E_CommerceApi.Application.Features.Queries.GetAllProducts
     public class GetAllProductQueryHandler : IRequestHandler<GetAllProductQueryRequest, GetAllProductQueryResponse>
     {
         public IProductReadRepository _productReadRepository { get; set; }
+        private ILogger<GetAllProductQueryHandler> _logger;
 
-        public GetAllProductQueryHandler(IProductReadRepository productReadRepository)
+        public GetAllProductQueryHandler(IProductReadRepository productReadRepository, ILogger<GetAllProductQueryHandler> logger)
         {
             _productReadRepository = productReadRepository;
+            _logger = logger;
         }
 
         public async Task<GetAllProductQueryResponse> Handle(GetAllProductQueryRequest request, CancellationToken cancellationToken)
         {
+            _logger.LogInformation("getting all products");
+            throw new Exception("Asadsadsadasdsadas...");
             var totalCount = _productReadRepository.GetAll().Count();
 
             var products = _productReadRepository.GetAll().Select(p => new

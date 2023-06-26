@@ -10,5 +10,6 @@ namespace E_CommerceApi.Application.Abstractions.Services
     public interface IAuthService
     {
         Task<Token> LoginAsync(string userNameOrEmail,string password,int accessTokenLifetime);
+        Task<Token> RefreshTokenLoginAsync(string refreshToken);
     }
 }

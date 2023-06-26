@@ -1,8 +1,10 @@
 ﻿using Azure.Core;
 using E_CommerceApi.Application.Abstractions.Services;
 using E_CommerceApi.Application.DTOs.User;
+using E_CommerceApi.Application.Exceptions;
 using E_CommerceApi.Domain.Entities.Identity;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.Identity.Client;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,7 +24,7 @@ namespace E_CommerceApi.Persistence.Services
 
         public async Task<CreateUserResponse> CreateAsync(CreateUser createUser)
         {
-            
+
             string errorList = String.Empty;
             IdentityResult identityResult = await _userManager.CreateAsync(new AppUser()
             {
@@ -50,6 +52,20 @@ namespace E_CommerceApi.Persistence.Services
                     Message = errorList,
                     Succeded = false
                 };
+            }
+        }
+
+        public async Task UpdateRefreshToken(string refreshToken, AppUser appUser,DateTime accessTokenTime, int refreshTokenTime)
+        {
+            if (appUser != null)
+            {
+                appUser.RefreshToken = refreshToken;
+                appUser.RefreshTokenEndDate = accessTokenTime.AddMinutes(refreshTokenTime);
+                await _userManager.UpdateAsync(appUser);
+            }
+            else
+            {
+                throw new NotFoundUserException();
             }
         }
     }
